@@ -25,6 +25,11 @@ io.on('connection', function (socket) {
     socket.on('new_msg', function (data) {
 
         /** 
+         * io.to(data.roomId).emit('msg_rcvd', data);
+         * It will send the message to the particular room with given roomId
+        */
+
+        /** 
          * io.emit('msg_rcvd', data);
          * It will send the message to all the clients
         */
